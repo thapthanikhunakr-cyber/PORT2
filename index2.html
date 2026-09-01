@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Menu</title>
+    <!-- นำเข้าฟอนต์ภาษาไทยจาก Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        /* ส่วนพื้นหลังและเลย์เอาต์หลัก */
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            /* เปลี่ยน 'your-image.jpg' เป็นชื่อไฟล์รูปภาพของคุณ */
+            background-image: url(img/momay2.JPG);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+        }
+
+        /* สไตล์ของลิงก์เมนู */
+        .nav-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-link:hover {
+            transform: scale(1.08);
+            opacity: 0.9;
+        }
+
+        /* ขนาดข้อความภาษาไทย */
+        .nav-link .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        /* ขนาดข้อความภาษาอังกฤษ */
+        .nav-link .subtitle {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+
+        /* จัดตำแหน่งเมนูกลางล่าง (คำคม) */
+        .nav-bottom {
+            position: absolute;
+            bottom: 8%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .nav-bottom:hover {
+            transform: translateX(-50%) scale(1.08);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- เมนูซ้าย: เกี่ยวกับผม -->
+        <a href="indexaboutme.html" class="nav-link">
+            <span class="title">เกี่ยวกับผม</span>
+            <span class="subtitle">ABOUT ME?</span>
+        </a>
+
+        <!-- เมนูขวา: ผลงาน -->
+        <a href="https://www.openlink.co/momay.xo " target="_blank" class="nav-link">
+            <span class="title">ผลงาน</span>
+            <span class="subtitle">PERFORMANCE</span>
+        </a>
+
+        <!-- เมนูล่าง: คำคม -->
+        <a href="quotes.html" class="nav-link nav-bottom">
+            <span class="title">คำคม</span>
+            <span class="subtitle">QUOTES</span>
+        </a>
+    </div>
+
+</body>
+</html>
